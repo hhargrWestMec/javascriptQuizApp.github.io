@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Quiz App </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="reloadPage(1);">
+    <div id="mainContainer">
+
+        <div id="scoreContainer">
+            <h1 id="scoreTitle"> Good Job! Your score was.. </h1>
+            <h2 id="scoreDisplay"> ??/10 </h2>
+            <input type="button" id="closeButton" value="View Explanations!" onclick="closeButton();">
+        </div>
+
+            <div id="questionContainer">
+                <input type="button" id="resetButton" value="Reset" onclick="resetQuiz();">
+                <input type="button" id="submitButton" value="Submit" onclick="submitQuiz();">
+                <h1 id="questionOutput"> 
+                    Question 1 : ...
+                </h1>
+
+            </div>
+
+                    <div id="answerContainer">
+                        <input type="button" id="prevButton" value="&lt;" onclick="previous();">
+                        <input type="button" id="nextButton" value="&gt;"  onclick="next();">
+
+
+                                        <ul id="answersMainList">
+                                            <li id="answer1" onclick="answerOneClicked();"> Answer One </li>
+                                            <li id="answer2" onclick="answerTwoClicked();"> Answer One </li>
+                                            <li id="answer3" onclick="answerThreeClicked();"> Answer One </li>
+                                            <li id="answer4" onclick="answerFourClicked();"> Answer One </li>
+                                        </ul>
+
+                    </div>
+
+            <div id="explanationContainer">
+                <h2 id="explanationOutput">
+                    Explanations will be displayed once submitted.
+                </h2>
+            </div>
+
+
+    </div>
+
+    <script src="objects.js"> </script>
+    <script src="functionLib.js"> </script>
+
+</body>
+</html>
